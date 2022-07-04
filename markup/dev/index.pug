@@ -1,0 +1,32 @@
+include pug/common/_head
+	block content
+		main#main
+			.container
+				.game
+					#window.game__window
+						//- .el: span.icon-happy
+						//- .el: span.icon-smile
+						//- .el: span.icon-tongue2
+						//- .el: span.icon-wink
+						//- .el: span.icon-grin2
+						//- .el: span.icon-angry2
+						//- .el: span.icon-evil2
+						//- .el: span.icon-shocked
+						//- .el: span.icon-baffled
+						//- .el: span.icon-confused2
+						//- .el: span.icon-confused
+						//- .el: span.icon-neutral
+						//- .el: span.icon-shocked
+						//- .el: span.icon-cool
+						//- .el: span.icon-wink2
+					.game__controls
+						.button-wrap
+							button#start.start Start
+							button#stop.stop Stop
+						.count-wrap
+							button#minus.minus.disabled -
+							.count
+								span.count__text Counts: 
+								span#number.count__number 6
+							button#plus.plus.disabled +
+		include pug/common/_footer

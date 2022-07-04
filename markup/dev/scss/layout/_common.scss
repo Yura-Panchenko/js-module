@@ -1,0 +1,104 @@
+[id="wrapper"] {
+  width: 100%;
+  overflow: hidden;
+  background: $base-background-color;
+}
+
+.container {
+  @extend %clearfix;
+  max-width: $max-width-center-container;
+  padding: $padding-container;
+  margin: 0 auto;
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  color: $white;
+  font-size: 20px;
+  line-height: 1;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 2px 8px rgba($black, .4);
+  }
+}
+
+.start {
+  background: $blue;
+}
+
+.stop {
+  background: $green;
+}
+
+.minus {
+  background: $red;
+}
+
+.plus {
+  background: $purple;
+}
+
+.game {
+  margin: 50px 0;
+  padding: 15px;
+  background: $gray-600;
+  border-radius: 15px;
+
+  &__window {
+    background: $white;
+    border-radius: 15px;
+    padding: 10px;
+    height: 400px;
+
+    .el {
+      display: inline-block;
+      font-size: 30px;
+      // position: absolute;
+      // visibility: hidden;
+    }
+
+    .show {
+      visibility: visible;
+    }
+  }
+
+  &__controls {
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.count-wrap {
+  display: flex;
+
+  button {
+    width: 50px;
+  }
+}
+
+.button-wrap {
+  button {
+    min-width: 150px;
+    margin: 0 10px 0 0;
+  }
+}
+
+.count {
+  margin: 0 15px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: $white;
+  font-size: 20px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
