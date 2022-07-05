@@ -8,7 +8,6 @@ let plus = document.getElementById('plus');
 let windowGame = document.getElementById('window');
 
 
-
 // level 1
 // start.addEventListener('click', () => {
 //     el.forEach(element => {
@@ -63,6 +62,9 @@ stop.addEventListener('click', () => {
     elements.forEach(() => {
         windowGame.firstChild.remove();
     });
+    let el = document.querySelectorAll('.el');
+    console.log(el.length);
+    number.innerText = el.length;
 })
 
 plus.addEventListener('click', () => {
@@ -75,16 +77,25 @@ plus.addEventListener('click', () => {
     span.classList.add(icon);
     div.appendChild(span);
     windowGame.appendChild(div);
+    let el = document.querySelectorAll('.el');
+    console.log(el.length);
+    number.innerText = el.length;
+    minus.classList.remove('disabled');
 })
 
 minus.addEventListener('click', () => {
     windowGame.firstChild.remove();
+    let el = document.querySelectorAll('.el');
+    if (el.length > 0) {
+
+    } else {
+        minus.classList.add('disabled');
+    }
+    number.innerText = el.length;
 })
 
-windowGame.addEventListener('change', (el) => {
-    let elements = document.querySelectorAll('.el');
-    console.log(elements)
-})
+// windowGame.addEventListener('change', (el) => {
+//     console.log(el);
+//     // console.log(elements)
+// })
 
-
-number.innerText = arr.length;
